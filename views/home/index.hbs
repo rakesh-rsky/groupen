@@ -1,0 +1,635 @@
+<audio id="call_ringtone">
+  <source src="/tone/iphone.mp3" type="audio/mpeg" />
+</audio>
+
+<div class="container-fluid">
+  <h1 class="heading">Groupen</h1>
+
+  <div id="file-container"></div>
+
+  <div class="col-md-2 online-status">
+    <div class="online-sec-btn">
+      <button
+        id="online-show-btn2"
+        class="collapsed"
+        data-toggle="collapse"
+        data-target="#navbar"
+        aria-expanded="false"
+        aria-controls="navbar"
+      >
+        <span class="icon-bars" id="status-2">online 0</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="col-md-8 message-body">
+
+    <!--<div class="col-md-8 col-md-offset-2 message-body"> -->
+
+    <div class="cus-nav navbar navbar-inverse navbar-static-top">
+      <div
+        class="user-panel collapsed"
+        data-toggle="collapse"
+        data-target="#user-panel"
+        aria-expanded="false"
+        aria-controls="navbar"
+      >
+        <img class="pro-icon" src="/images/profile-icon4.png" width="25px" />
+        <span class="user-name"></span>
+        <img id="down-icon2" src="/images/icon-1.png" />
+      </div>
+
+      <div id="video-call-main">
+        <button id="video-call-btn">
+          <img src="/images/video1.png" />
+        </button>
+      </div>
+
+      <div class="navbar-head">
+        <button
+          id="online-show-btn"
+          type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#navbar"
+          aria-expanded="false"
+          aria-controls="navbar"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <!-- <span class="icon-bars"></span> -->
+          <span class="icon-bars" id="status-1">online 0</span>
+          <!-- <span class="icon-bars"></span> -->
+        </button>
+      </div>
+
+      <div id="navbar" class="navbar-collapse collapse">
+        <div class="userlist-name">
+          <span id="toggle-close-btn1">&times;</span>
+          <ul class="nav navbar-nav user-list nano-content">
+
+          </ul>
+        </div>
+      </div>
+
+      <div id="user-panel" class="navbar-collapse collapse">
+        <div class="user-panel-list">
+          <span id="toggle-close-btn2">&times;</span>
+          <ul class="nav navbar-nav user-setting-list nano-content">
+            <li class="setting-list" id="search">
+              <span
+                class="glyphicon glyphicon-search user-search-logo"
+              ></span>search
+            </li>
+            <li class="setting-list" id="chat-request">
+              <span
+                class="glyphicon glyphicon-envelope user-chat-list"
+              ></span>Friend Request
+            </li>
+            <li class="setting-list" id="friend-list">
+              <span
+                class="glyphicon glyphicon-user user-friend-list"
+              ></span>Friend List
+            </li>
+            <li class="setting-list" id="setting">
+              <span class="glyphicon glyphicon-cog user-set-list"></span>Setting
+            </li>
+            <li class="setting-list" id="logout">
+              <span
+                class="glyphicon glyphicon-log-out user-set-list"
+              ></span>Logout
+            </li>
+
+            <li class="setting-list" id="about">
+              <span
+                class="glyphicon glyphicon-info-sign user-set-list"
+              ></span>About
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- <div>
+      <ul id="messages"></ul>
+    </div> -->
+    <div id="chat_main">
+    </div>
+
+  </div>
+
+  <div class="col-md-2 aboutus-main">
+    <div class="about-us">
+      <a href="/about-us" target="">About-us</a>
+    </div>
+  </div>
+
+</div>
+
+<form class="type_message hiding" action="">
+  <input
+    id="m2"
+    autocomplete="off"
+    placeholder=" Type a message "
+    disabled="disabled"
+  />
+  <input id="m" autocomplete="off" placeholder=" Type a message " />
+  <a id="send-location"><span
+      class="glyphicon glyphicon-map-marker location"
+    ></span></a>
+  {{! id="send-file" renamed to "send-file-renamed" to prevent click on paperclip }}
+  <a id="send-file-renamed"><span
+      class="glyphicon glyphicon-paperclip paperclip"
+    ></span></a>
+  <button id="btn"></button>
+</form>
+
+<div>
+  <div
+    id="signup-modal"
+    class="modal fade reg"
+    role="dialog"
+    data-backdrop="static"
+    data-keyboard="false"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <a
+            href="/about-us"
+            target=""
+            class="btn btn-success aboutlink"
+          >About</a>
+          <button class="btn btn-success signup-to-login">Login</button>
+          <form
+            id="signup-form"
+            action="/signup"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <h1 class="modal-heading">Sign Up</h1>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control name"
+                name="name"
+                placeholder="Enter name*"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                id="username"
+                type="text"
+                class="form-control username"
+                name="username"
+                placeholder="Enter username*"
+              />
+              <span class="phone-info username-info"></span>
+
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                class="form-control password"
+                name="password"
+                placeholder="Enter Password*"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control email"
+                name="email"
+                placeholder="Enter Email*"
+              />
+              <span class="phone-info">we send OTP to this email</span>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success signup-btn">sign up</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div
+    id="login-modal"
+    class="modal fade reg"
+    role="dialog"
+    data-backdrop="static"
+    data-keyboard="false"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <a
+            href="/about-us"
+            target=""
+            class="btn btn-success aboutlink"
+          >About</a>
+          <button class="btn btn-success login-to-signup">Sign up</button>
+          <form
+            id="login-form"
+            action="/login"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <h1 class="modal-heading">Login</h1>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control username tmp-user"
+                data-id="{{loggedUsername}}"
+                name="username"
+                value="{{loggedUsername}}"
+                placeholder="Enter your username"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                class="form-control password tmp-text"
+                data-id="{{loggedPassword}}"
+                name="password"
+                value="{{loggedPassword}}"
+                placeholder="Enter your password"
+              />
+            </div>
+            <div class="form-group">
+              <span
+                style="display: none;"
+                class="alert alert-danger login-info"
+              ></span>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success login-btn">Login</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div
+    id="search-modal"
+    class="modal fade search-user-main"
+    role="dialog"
+    data-backdrop="static"
+    data-keyboard="false"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <form
+            id="search-user-form"
+            class=""
+            method="post"
+            action="/user/search"
+            enctype="multipart/form-data"
+          >
+            <div class="form-group search-user">
+              <input
+                type="text"
+                id="user-search-bar"
+                class="form-control"
+                name="user_search"
+                placeholder="Type name 'or' Username"
+              />
+            </div>
+            <div class="form-group">
+              <span class="alert alert-danger search-info"></span>
+            </div>
+            <div>
+              <button
+                id="user-search-btn"
+                class="btn btn-success"
+              >search</button>
+            </div>
+          </form>
+
+          <div id="search-data-list">
+            <ul id="search-data-display">
+
+            </ul>
+          </div>
+
+          <div class="form-group">
+            <button
+              class="btn btn-info search-user-close-btn"
+              class="search-list"
+            >close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div
+    id="chat-request-modal"
+    class="modal fade chat-request-main"
+    role="dialog"
+    data-backdrop="static"
+    data-keyboard="false"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div id="chat-request-list">
+            <ul id="chat-request-display">
+
+            </ul>
+          </div>
+
+          <div class="form-group">
+            <button
+              class="btn btn-info chat-request-close-btn"
+              class="search-list"
+            >close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div
+    id="friend-list-modal"
+    class="modal fade friends-list-main"
+    role="dialog"
+    data-backdrop="static"
+    data-keyboard="false"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div id="friend-list">
+            <ul id="friend-data-list">
+            </ul>
+          </div>
+
+          <div class="form-group">
+            <button
+              class="btn btn-info friend-list-close-btn"
+              class="search-list"
+            >close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div
+    id="setting-modal"
+    class="modal fade setting-main"
+    role="dialog"
+    data-backdrop="static"
+    data-keyboard="false"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div id="setting-list">
+            <ul>
+              <li
+                id="change-name"
+                class="alert alert-success setting_list"
+              >Change Name</li>
+              <div id="name-change">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="new-name"
+                    class="form-control"
+                    name="newname"
+                    placeholder="Enter new Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <span
+                    style="display: none;"
+                    class="alert newname-info"
+                  ></span>
+                </div>
+                <div class="form-group">
+                  <button
+                    type="button"
+                    id="name-change-btn"
+                    class="btn btn-success name-change-btn"
+                  >Save</button>
+                </div>
+              </div>
+              <hr />
+
+              <li
+                id="change-email"
+                class="alert alert-success setting_list"
+              >Change Email</li>
+              <div id="email-change">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="new-email"
+                    class="form-control"
+                    name="newemail"
+                    placeholder="Enter New Email"
+                  />
+                </div>
+                <div class="form-group">
+                  <span
+                    style="display: none;"
+                    class="alert newemail-info"
+                  ></span>
+                </div>
+                <div class="form-group">
+                  <button
+                    type="button"
+                    id="email-change-btn"
+                    class="btn btn-success email-change-btn"
+                  >Save</button>
+                </div>
+              </div>
+              <hr />
+
+              <li
+                id="change-password"
+                class="alert alert-success setting_list"
+              >Change Password</li>
+              <div id="password-change">
+                <div class="form-group">
+                  <input
+                    type="password"
+                    id="old-password"
+                    class="form-control"
+                    name="oldpassword"
+                    placeholder="Enter old Password"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    id="new-password"
+                    class="form-control"
+                    name="newpassword"
+                    placeholder="Enter New Password"
+                  />
+                </div>
+                <div class="form-group">
+                  <span
+                    style="display: none;"
+                    class="alert newpassword-info"
+                  ></span>
+                </div>
+                <div class="form-group">
+                  <button
+                    type="button"
+                    id="password-change-btn"
+                    class="btn btn-success password-change-btn"
+                  >change</button>
+                </div>
+              </div>
+              <hr />
+            </ul>
+          </div>
+
+          <div class="form-group">
+            <button
+              class="btn btn-info setting-close-btn"
+              class="search-list"
+            >close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div
+    id="logout-modal"
+    class="modal fade logout-main"
+    role="dialog"
+    data-backdrop="static"
+    data-keyboard="false"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div id="new-logout">
+            <div class="form-group">
+              <p>Are you sure want to logout ?</p>
+            </div>
+            <div class="logout-btn-main">
+
+              <button
+                class="btn btn-info logout-close-btn"
+                class="search-list"
+              >cancel</button>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <a
+                href="/user/logout"
+                class="btn btn-success logout-btn"
+              >logout</a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div
+    id="video-call-modal"
+    class="modal fade video-call-main"
+    role="dialog"
+    data-backdrop="static"
+    data-keyboard="false"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div id="video-call">
+            <div id="video-call-remote" class="form-group">
+            </div>
+
+            <div id="video-call-local" class="form-group">
+            </div>
+
+            <div class="end-video-call-btn-main form-group">
+              <!-- <button type="button" class="btn btn-warning flip-camera">back camera</button>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> -->
+              <button
+                type="button"
+                data-id=""
+                class="btn btn-warning end-video-call-btn"
+              >End call</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div
+    id="accept-call-modal"
+    class="modal fade accept-call-main"
+    role="dialog"
+    data-backdrop="static"
+    data-keyboard="false"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div id="accept-call">
+
+            <div class="accept-call-name-main">
+              <span class="calling-text"></span>
+              <br /><br />
+              name :&nbsp;
+              <span id="accept-call-name"></span>
+            </div>
+
+            <div class="accept-call-username-main">
+              username :&nbsp;
+              <span id="accept-call-username"></span>
+            </div>
+
+            <div class="accept-video-call-btn-main form-group">
+              <button
+                type="button"
+                data-caller=""
+                class="btn btn-warning reject-video-call-btn"
+              >reject call</button>
+              <span>&nbsp;&nbsp;&nbsp;</span>
+              <button
+                type="button"
+                data-caller=""
+                class="btn btn-success accept-video-call-btn"
+              >accept call</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

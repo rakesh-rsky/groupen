@@ -1,0 +1,865 @@
+@media (max-width: 767px) {
+  .online-status {
+    display: none;
+  }
+
+  .online-dot {
+    margin-top: -25px !important;
+  }
+
+  #about {
+    display: block;
+    border-top: 2px solid #a4bbb4;
+    padding-top: 10px;
+  }
+
+  .aboutus-main {
+    display: none;
+  }
+
+  /* #toggle-close-btn1 {
+      display: block;
+  } */
+
+  #toggle-close-btn1,
+  #toggle-close-btn2 {
+    font-size: 56px;
+    background-color: #359c91;
+    border-radius: 3.5rem;
+    padding: 0px 16px;
+    cursor: pointer;
+    /* display: none; */
+  }
+
+  div#navbar {
+    background-color: #3cb1a4;
+    text-align: center;
+    width: 50%;
+    /* margin-top: 14px; */
+    padding-left: 0px;
+    padding-right: 0px;
+    /* position: absolute; */
+    right: 0;
+    top: 0;
+    position: fixed;
+    transition: 0.3s;
+    height: 100% !important;
+    overflow-x: hidden;
+  }
+
+  .user-panel {
+    cursor: pointer;
+  }
+
+  #user-panel {
+    background-color: #3cb1a4;
+    text-align: center;
+    width: 50%;
+    height: 100% !important;
+    font-size: 21px;
+    /* margin-top: 14px; */
+    line-height: 40px;
+    font-weight: 400;
+    color: #000;
+    padding-left: 0px;
+    padding-top: 13px;
+    padding-right: 0px;
+    position: fixed;
+    transition: 0.3s;
+    top: 0;
+    left: 0;
+  }
+
+  body {
+    /* background-image: url(/images/background1.jpg); */
+    background-image: url(/images/macbook2.jpg);
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    /* background-image: url(/images/background2.jpg); */
+    background-image: url(/images/macbook.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .message-body {
+    /* ---------color transparent on chat screen---------- */
+    border-radius: 5px;
+    box-shadow: 0px 20px 0px 15px #403d3c85;
+    background-color: #403d3c85;
+  }
+
+  .online-status {
+    display: none;
+  }
+
+  #about {
+    display: block;
+  }
+
+  .aboutus-main {
+    display: none;
+  }
+
+  #online-show-btn {
+    display: block;
+  }
+
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+
+  div#navbar {
+    background-color: #3cb1a4f2;
+    text-align: center;
+    width: 200px;
+    margin-top: 14px;
+    position: absolute;
+    right: 0;
+  }
+
+  .navbar-nav > li {
+    /* float: left; */
+    border-bottom: 1px solid #677f82;
+    border-bottom-right-radius: 25px;
+    border-bottom-style: groove;
+  }
+
+  .user-setting-list {
+    float: left;
+    color: #fff;
+    border: 0;
+    border-radius: 0px 0px 1.5rem 1.5rem;
+    background-color: #222;
+    /* margin-left: -3%; */
+    width: 100%;
+  }
+
+  .setting-list {
+    padding-bottom: 15px;
+    border: 0 !important;
+    padding-top: 30px;
+    padding-left: 20px;
+    font-size: 20px;
+    list-style-type: none;
+    text-align: left;
+  }
+}
+
+@media (min-width: 992px) {
+  .online-status {
+    display: block;
+    top: 9px;
+    position: sticky;
+  }
+
+  #about {
+    display: none;
+  }
+
+  .aboutus-main {
+    display: block;
+  }
+
+  #toggle-close-btn1 {
+    display: none;
+  }
+  #online-show-btn {
+    display: none;
+  }
+
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+
+  div#navbar {
+    background-color: #3cb1a4f2;
+    text-align: center;
+    width: 25% !important;
+    margin-top: 14px;
+    margin-left: -25%;
+    position: absolute;
+    left: 0;
+  }
+
+  #user-panel {
+    width: 100% !important;
+  }
+}
+
+.heading {
+  text-align: center;
+  font-family: "ubuntu";
+  color: #352c1f;
+  padding-top: 15px;
+  margin-top: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
+  /* margin-bottom: 10px; */
+  padding-bottom: 30px;
+  background-color: #3cb1a4;
+  /* background-color: #6b747d; */
+}
+
+.sub-heading {
+  color: #9d3749;
+}
+
+button#online-show-btn2 {
+  font-family: "ubuntu";
+  background-color: #222;
+  border: 0;
+  outline: 0px;
+  color: #5cef85;
+  padding: 5px;
+  margin: -10px -23%;
+  font-size: 22px;
+  height: 56px;
+  width: 123%;
+}
+
+.about-us {
+  background-color: #212121;
+  padding: 15px;
+  text-align: center;
+  margin-top: -10px;
+  margin-right: -30px;
+  font-family: "ubuntu";
+  font-size: 22px;
+}
+
+.about-us a {
+  color: #cfdcd6;
+  text-decoration: none;
+}
+.about-us a:hover {
+  color: #57e385;
+  text-decoration: none;
+}
+.aboutus-main {
+  top: 9px;
+  position: sticky;
+}
+
+.cus-nav {
+  /* background-color: #08c781; */
+  /* background-color: #a03064f9; */
+  /* background-color: #156b4cf2; */
+  height: 55px;
+  /* width: auto; */
+  margin: -10px -30px;
+  padding: 15px 25px;
+  font-size: 20px;
+  position: sticky;
+  /* border-radius: 5px; */
+  top: 0;
+  /* box-shadow: 0px 1px 0px 3px #46a270; */
+}
+
+.navbar-toggle {
+  top: -45px;
+  border-color: none;
+  text-align: center;
+  color: #5cef85;
+  outline: 0px;
+  font-weight: 500;
+  margin-right: -10px;
+  margin-bottom: -27px;
+  font-family: "ubuntu";
+  border: 0px;
+  background-color: #222;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+  background-color: #222;
+}
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #222;
+}
+img#down-icon {
+  padding-left: 15px;
+  height: 10px;
+}
+
+img#down-icon2 {
+  height: 10px;
+}
+
+span.curr-info {
+  font-size: 9px;
+  padding-right: 4px;
+  color: #000 !important;
+}
+
+/* ul#messages {
+margin-bottom: 7rem;
+font-size: 18px;
+padding-top: 13px;
+margin-left:-30px;
+margin-right:-30px;
+font-family: 'ubuntu';
+} */
+ul.messages {
+  margin-bottom: 7rem;
+  font-size: 18px;
+  padding-top: 13px;
+  /* width: 80rem; */
+  margin-left: 0px;
+  margin-right: 0px;
+  font-family: "ubuntu";
+}
+
+.send-message {
+  color: #793b6e;
+  text-align: right;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: 15px;
+  border-radius: 1.3rem 1.3rem 1.3rem 1.3rem;
+  position: relative;
+}
+
+.receive-message {
+  color: #1e8636;
+  margin-right: 20%;
+  max-width: 80%;
+  margin-left: 15px;
+  border-radius: 1.3rem 1.3rem 1.3rem 1.3rem;
+  position: relative;
+}
+
+.send-message::after {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 11px solid #eee;
+  position: absolute;
+  right: -9px;
+  top: 14px;
+  /* z-index: 9; */
+  content: "";
+}
+.receive-message::before {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 11px solid #eee;
+  position: absolute;
+  left: -9px;
+  top: 14px;
+  /* z-index: 9; */
+  content: "";
+}
+
+.hiding {
+  display: none;
+}
+
+/* body{
+  background-position: center;
+  background-attachment: fixed;
+  background-size:cover;
+  background-repeat: no-repeat;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font: 13px Helvetica, Arial;
+}
+form.type_message input#m2 {
+  border: 0;
+  margin-bottom: 8px;
+  background-color: #fff;
+  border-radius: 2.5rem;
+  padding: 13px;
+  height: 48px;
+  width: 98%;
+  margin-right: 0.5%;
+  font-size: 16px;
+}
+form.type_message button {
+  width: 48px;
+  border-radius: 1.4rem;
+  background: rgb(130, 224, 255);
+  border: none;
+  padding: 19px;
+}
+
+form.type_message {
+  padding: 3px;
+  border-radius: 1.4rem;
+  background-color: #77736f;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+input#m {
+  border: 0;
+  margin-bottom: 8px;
+  border-radius: 2.5rem 0px 0px 2.5rem;
+  padding: 13px;
+  height: 48px;
+  position: absolute;
+  width: 65%;
+  left: 352px;
+  background-color: #fff;
+  font-size: 16px;
+  margin-left: -349px;
+  z-index: 999;
+}
+
+.messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.messages li {
+  padding: 5px 10px;
+  /* border-radius: 1.3rem; */
+}
+.messages li {
+  background: #eee;
+  margin: 5px 0px;
+  width: max-content;
+}
+
+span.paperclip {
+  position: absolute;
+  background-color: #fff;
+  font-size: 26px;
+  /* color: #166ebd; */
+  color: #fff;
+  /* cursor: pointer; */
+  margin-left: -116px;
+  text-align: right;
+  margin-top: 14px;
+  z-index: 999;
+}
+
+span.location {
+  position: absolute;
+  background-color: #fff;
+  font-size: 28px;
+  color: #c15836;
+  cursor: pointer;
+  margin-left: -85px;
+  /* text-align: right; */
+  margin-top: 12px;
+  z-index: 999;
+}
+
+#btn {
+  background-image: url(/images/send2.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: space;
+  height: 48px;
+  margin-bottom: 8px;
+  margin-left: -50px;
+  position: absolute;
+  border-radius: 2.5rem;
+}
+
+.modal-body {
+  text-align: center;
+  padding: 30px;
+}
+
+.modal-heading {
+  font-family: "ubuntu";
+  font-style: italic;
+  padding-left: 7rem;
+}
+input.error {
+  border: solid 1px #f00;
+}
+
+span.user-name {
+  color: #3cb1a4;
+  font-family: "ubuntu";
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #080000;
+}
+/*
+@media only screen and (max-width:480px) {
+	.resp-tabs-container{
+		padding:10px;
+	}
+ */
+
+ul.nav.navbar-nav.user-list {
+  display: inline-grid;
+  /* overflow-y: scroll; */
+  width: 100%;
+  /* height: 400px; */
+}
+
+.userlist-name {
+  height: 400px;
+  width: 100%;
+  /* overflow: scroll; */
+  position: relative;
+}
+
+.login-to-signup,
+.signup-to-login {
+  float: right;
+  background-color: #fff;
+  color: #5cb85c;
+}
+
+#congrates {
+  padding-top: 30px;
+  font-size: 22px;
+}
+
+.hide_div {
+  display: none;
+}
+
+.username {
+  cursor: pointer;
+}
+
+.user-setting-list {
+  width: 100%;
+  padding-left: 25px;
+  text-align: left;
+}
+
+.user-panel.collapsed {
+  width: max-content;
+}
+
+.setting-list > span {
+  padding-right: 12px;
+}
+.setting-list {
+  color: #fff;
+  cursor: pointer;
+}
+.user-set-list span.glyphicon {
+  color: #fff;
+  font-weight: 500;
+}
+
+#search-modal .modal-content {
+  /* background-color: #fff0; */
+  /* border: 0px; */
+  /* position: sticky; */
+  /* box-shadow: 0 0 0 0 #fff0; */
+}
+
+/* li.search-list {
+    padding: 5px 0px;
+} */
+
+.setting-list {
+  border: 0;
+  /* color: #000; */
+  font-size: 20px;
+  list-style-type: none;
+}
+
+.search-list,
+.request-list {
+  list-style-type: none;
+  text-align: left;
+  padding-top: 15px;
+}
+
+.search-list span,
+.request-list span {
+  color: #af0b5b;
+  font-size: 20px;
+}
+
+.send-request-btn {
+  padding: 4px 5px;
+  position: absolute;
+  margin-top: -15px;
+  /* margin-left: 30px; */
+  right: 10%;
+}
+
+.setting_list {
+  list-style-type: none;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+  /*margin-left: 50px;*/
+  padding-top: 10px;
+}
+
+.request-accept-btn {
+  padding: 4px 5px;
+  position: absolute;
+  margin-top: -15px;
+  right: 28%;
+}
+
+.request-delete-btn {
+  padding: 4px 5px;
+  position: absolute;
+  margin-top: -15px;
+  right: 10%;
+}
+
+li.friend {
+  font-size: 22px;
+  padding-top: 10px;
+  list-style-type: none;
+}
+
+.logout-btn-main {
+  margin: 15px 0px;
+}
+
+#video-call-btn {
+  width: 36px;
+  position: absolute;
+  left: 50%;
+  cursor: pointer;
+  border: 0px;
+  color: #fff;
+  background-color: #212121;
+  margin-top: -30px;
+}
+
+.end-video-call-btn {
+  color: #fff;
+  background-color: #ec971f;
+  border-radius: 2.5rem;
+  border-color: #d58512;
+  outline: none;
+}
+
+.end-video-call-btn:focus {
+  outline: none;
+}
+
+#video-call-modal .modal-body {
+  padding: 0;
+}
+#video-call-modal .modal-content {
+  height: 130px;
+  /* border-radius: 7rem !important; */
+}
+
+#video-call-local video {
+  /* width: 100px; */
+  height: 100px;
+  position: absolute;
+  /* z-index: 99; */
+  right: 15px;
+  top: 0;
+  border-radius: 5px;
+  border: 2px solid #b31b68;
+}
+
+#video-call-remote video {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #9a3256;
+  /* border-radius: 5rem; */
+}
+
+.online-dot {
+  width: 0px;
+  height: 0px;
+  border: solid 6px #0f0;
+  position: absolute;
+  left: 0;
+  border-radius: 1.5rem;
+  z-index: 999;
+  margin-top: -30px;
+  margin-left: 15%;
+}
+
+.unread-message {
+  /* width: 0px; */
+  /* height: 0px; */
+  border: solid 5px #9c3748;
+  position: absolute;
+  right: 0;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #9c3748;
+  border-radius: 2.5rem;
+  z-index: 999;
+  /* margin-left: 10px; */
+  color: #78ff2c;
+  margin-top: -25px;
+  margin-right: 10px;
+}
+
+/* #send-file {
+    background-image: url(/images/send_file2.png);
+    background-position: 7px 7px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    right: 121px;
+    width: 28px;
+    bottom: 21px;
+    height: 35px;
+    outline: none;
+    position: absolute;
+} */
+
+/* ============================= */
+.ProgressContainer {
+  /* width: 396px; */
+  height: 36px;
+  background: #f8f8f8;
+  margin-top: 14px;
+  border: 1px solid #e8e8e8;
+  border-top: 1px solid #d8d8d8;
+
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.ProgressBar {
+  height: 100%;
+  width: 0%;
+
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#a50aad),
+    color-stop(0.5, #6b0d6b),
+    to(#4a074a)
+  );
+}
+
+.send-file {
+  background: #fff;
+  padding: 5px;
+  position: relative;
+  /* top: 50%; */
+  /* float: right; */
+  margin-left: 75px !important;
+  /* margin-bottom: 70px; */
+  /* height: 1px; */
+  width: 80% !important;
+  border: 1px solid #dfdfdf;
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2) !important;
+  -moz-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2) !important;
+  -webkit-border-radius: 11px !important;
+  -moz-border-radius: 11px !important;
+  border-radius: 11px;
+}
+
+img.Thumb {
+  width: 100%;
+  height: 100%;
+}
+
+.accept-call-name-main {
+  color: #000;
+}
+
+.accept-call-username-main {
+  padding: 20px;
+  color: #000;
+}
+
+span#accept-call-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #96137e;
+}
+span#accept-call-username {
+  font-weight: 700;
+  font-size: 20px;
+  color: #8c0767;
+}
+
+span.calling-text {
+  color: #09ad5c;
+  font-size: 15px;
+  float: left;
+  font-weight: 600;
+}
+
+.reject-video-call-btn {
+  background-color: #d2c9c9;
+  color: #000;
+  border-color: #d2c9c9;
+}
+
+.accept-video-call-btn {
+  color: #000;
+}
+
+.apk {
+  color: #fff;
+  cursor: pointer;
+}
+
+.aboutlink {
+  float: left;
+  background-color: #fff;
+  color: #5cb85c;
+}
+
+/*  ================== email verification page ================*/
+
+#verifyotp-form {
+  margin-top: 10rem;
+}
+
+#otp {
+  font-size: 18px;
+  letter-spacing: 10px;
+  font-weight: 600;
+}
+#accountinfo {
+  margin-top: 10rem;
+  text-align: center;
+}
+.accountinfo {
+  color: #b528a4;
+  font-size: 20px;
+}
+
+.login-page-btn {
+  margin-top: 30px;
+}
+
+.app {
+  padding-bottom: 40px;
+}

@@ -1,0 +1,84 @@
+<div class="container-fluid">
+  <div>
+    <h1 class="heading">Groupen</h1>
+  </div>
+</div>
+
+<section>
+  <div>
+    <div class="rows">
+      <div class="col-md-6 col-md-offset-3">
+        <form
+          id="verifyotp-form"
+          action="/verifyotp"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class="form-group">
+            <p style="color: #0fa;">we send an OTP to your email address. If not
+              found in inbox, check your span folder</p>
+          </div>
+          <div class="form-group">
+            <label for="phone">Enter OTP :</label>
+            <input type="text" id="otp" name="otp" class="form-control" />
+            <input
+              type="hidden"
+              id="tk"
+              name="tk"
+              value=""
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <span
+              style="display: none;"
+              class="alert alert-danger otp-info"
+            ></span>
+          </div>
+          <div class="form-group">
+            <label for="">
+              <button
+                type="submit"
+                id="verifyotp"
+                name="verifyotp"
+                class="btn btn-primary"
+              >verify</button>
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6 col-md-offset-3">
+        <div id="accountinfo" class="alert alert-success">
+          <span class="accountinfo">Your Account Created Successfully.</span>
+          <br />
+          <a href="/" class="btn btn-success login-page-btn">Login</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+></script>
+
+<script>
+  $('#tk').val(localStorage.getItem('tk')); localStorage.removeItem('tk');
+  $(document).on('submit','#verifyotp-form', function(e){ e.preventDefault();
+  $('.otp-info').css({'display':'none'}); $.ajax({ type:$(this).attr('method'),
+  url:$(this).attr('action'), processData:false, contentType:false, data:new
+  FormData($('#verifyotp-form')[0]), success: function(data){
+  $('#verifyotp').removeAttr('disabled'); $('#verifyotp').text('verify');
+  if(data.success){ $('#verifyotp-form').css({'display':'none'});
+  $('#accountinfo').css({'display':'block'}); }else{ console.log(data.message);
+  $('.otp-info').text(data.message); $('.otp-info').css({'display':'block'}); }
+  }, error: function(req, err){ console.log(err + 'with status code' +
+  req.statusText); $('#verifyotp').removeAttr('disabled');
+  $('#verifyotp').text('verify'); }, beforeSend: function(){
+  $('#verifyotp').attr('disabled'); $('#verifyotp').text('Please Wait...'); }
+  }); }); $(document).on('focus', '#otp', function(e){
+  $('.otp-info').css({'display':'none'}); $('#otp').attr('autocomplete','off');
+  }); $('#accountinfo').css({'display':'none'});
+
+</script>
