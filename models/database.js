@@ -147,7 +147,7 @@ module.exports = {
             result = res;
             resolve(res);
           });
-        db.close();
+          setTimeout(() => {db.close()}, 1500)
       });
     });
   },
@@ -168,7 +168,7 @@ module.exports = {
             if (err) throw err;
             resolve(res);
           });
-        db.close();
+        setTimeout(() => {db.close()}, 1500)
       });
     });
   },
