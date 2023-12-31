@@ -35,7 +35,7 @@ module.exports = {
           //console.log('unverified data deleted..', res.deletedCount);
         });
 
-        db.close();
+        setTimeout(() => {db.close()}, 1500);
       } else {
         var query1 = {
           name: data.name,
@@ -48,7 +48,7 @@ module.exports = {
           if (err) throw err;
           //console.log('data saved Successfully');
         });
-        db.close();
+        setTimeout(() => {db.close()}, 1500);
       }
     });
   },
@@ -70,7 +70,7 @@ module.exports = {
             result = res;
             resolve(res);
           });
-        db.close();
+        setTimeout(() => {db.close()}, 1500);
       });
     });
   },
@@ -93,7 +93,7 @@ module.exports = {
           //console.log('contact mesasage received..');
           resolve(res);
         });
-        db.close();
+        setTimeout(() => {db.close()}, 1500);
       });
     });
   },
@@ -126,7 +126,7 @@ module.exports = {
       await dbo.collection("data4").updateOne(query, push, (err, res) => {
         if (err) throw err;
       });
-      db.close();
+      setTimeout(() => {db.close()}, 1500);
     });
   },
 
@@ -208,7 +208,7 @@ module.exports = {
               //console.log(res1);
               resolve(result1);
             });
-          db.close();
+          setTimeout(() => {db.close()}, 1500);
         }
       );
     });
@@ -239,7 +239,7 @@ module.exports = {
             //console.log('data saved....');
             resolve(res);
           });
-          db.close();
+          setTimeout(() => {db.close()}, 1500);
         }
       );
     });
@@ -267,7 +267,7 @@ module.exports = {
               //console.log(res);
               resolve(res);
             });
-          db.close();
+          setTimeout(() => {db.close()}, 1500);
         }
       );
     });
@@ -295,7 +295,7 @@ module.exports = {
               // //console.log(res);
               resolve(res);
             });
-          db.close();
+          setTimeout(() => {db.close()}, 1500);
         }
       );
     });
@@ -377,7 +377,7 @@ module.exports = {
         //   //console.log('query 5 done..');
         // });
 
-        db.close();
+        setTimeout(() => {db.close()}, 1500);
       }
     );
   },
@@ -404,7 +404,7 @@ module.exports = {
           //console.log('request deleted...');
         });
 
-        db.close();
+        setTimeout(() => {db.close()}, 1500);
       }
     );
   },
@@ -431,7 +431,7 @@ module.exports = {
               //console.log(res);
               resolve(res);
             });
-          db.close();
+          setTimeout(() => {db.close()}, 1500);
         }
       );
     });
@@ -459,7 +459,7 @@ module.exports = {
               //console.log(res);
               resolve(res);
             });
-          db.close();
+          setTimeout(() => {db.close()}, 1500);
         }
       );
     });
@@ -487,7 +487,7 @@ module.exports = {
               //console.log(res);
               resolve(res);
             });
-          db.close();
+          setTimeout(() => {db.close()}, 1500);
         }
       );
     });
@@ -509,7 +509,7 @@ module.exports = {
             if (err) throw err;
             resolve(res);
           });
-          db.close();
+          setTimeout(() => {db.close()}, 1500);
         }
       );
     });
@@ -531,7 +531,7 @@ module.exports = {
             if (err) throw err;
             resolve(res);
           });
-          db.close();
+          setTimeout(() => {db.close()}, 1500);
         }
       );
     });
@@ -553,7 +553,7 @@ module.exports = {
             if (err) throw err;
             resolve(res);
           });
-          db.close();
+          setTimeout(() => {db.close()}, 1500);
         }
       );
     });
